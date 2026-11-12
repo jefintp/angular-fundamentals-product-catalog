@@ -1,0 +1,40 @@
+<main class="home-container">
+
+  <header class="page-header">
+    <h1>Welcome to Angular Fundamentals</h1>
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+    <span>Angular Version: {{ version }}</span>
+  </header>
+
+  <section class="products-section">
+    <h2>Our Products</h2>
+
+    <div class="products-grid">
+      @for (product of products; track product.id) {
+        <article class="product-card">
+
+          <img [src]="product.image" [alt]="product.name" class="product-image">
+
+          <div class="product-details">
+            <h3>{{ product.name }}</h3>
+            <p class="price">₹{{ product.price }}</p>
+            <p class="category">{{ product.category }}</p>
+
+            @if (product.inStock) {
+              <span class="availability available">Available</span>
+            } @else {
+              <span class="availability unavailable">Out of Stock</span>
+            }
+
+            <button [disabled]="!product.inStock">
+              Buy Now
+            </button>
+          </div>
+
+        </article>
+      }
+    </div>
+  </section>
+
+</main>

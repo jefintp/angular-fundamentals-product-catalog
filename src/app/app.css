@@ -1,0 +1,58 @@
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Brand */
+.nav-brand {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-brand {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 9px 12px;
+  }
+}

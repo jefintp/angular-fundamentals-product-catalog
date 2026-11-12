@@ -1,59 +1,118 @@
-# AngularFundamentals
+## Project Overview
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29.
+A simple product catalogue application developed as part of the Angular Fundamentals Assessment using Angular 22, TypeScript, HTML and CSS.
+The application consists of two pages:
 
-## Development server
+- **Home:** Displays a product catalogue with product images, names, prices, categories and availability status.
+- **About:** Provides an overview of the project and the technologies used.
 
-To start a local development server, run:
+## Technologies Used
+
+- Angular 22
+- TypeScript
+- HTML5
+- CSS3
+
+## Angular Concepts Implemented
+
+### 1. Standalone Components
+Used Angular standalone components to build the application without NgModules.
+
+### 2. Component-Based Architecture
+Organized the application into reusable and maintainable components.
+
+### 3. Services and Dependency Injection
+Created an injectable `ProductService` to manage product data and used Angular's `inject()` function to access the service from the Home component.
+
+### 4. Routing
+Implemented two routes:
+- `/` – Home
+- `/about` – About
+
+Added navigation links to move between the pages.
+
+### 5. Modern Angular Control Flow
+Used Angular's built-in control flow:
+
+- `@for` – To iterate through and display products.
+- `@if` and `@else` – To display product availability based on stock status.
+
+## Project Structure
+
+
+angular-fundamentals/
+│
+├── src/
+│   └── app/
+│       ├── components/
+│       │   ├── home/
+│       │   └── about/
+│       │
+│       ├── services/
+│       │   └── product.ts
+│       │
+│       ├── models/
+│       │   └── product.model.ts
+│       │
+│       ├── app.config.ts
+│       ├── app.routes.ts
+│       ├── app.ts
+│       └── app.html
+│
+├── screenshots/
+│   ├── 01-successful-build.png
+│   ├── 02-control-flow.png
+│   └── 03-about-navigation.png
+│
+├── angular.json
+├── package.json
+└── README.md
+
+
+## Installation and Setup
+
+
+### Run the Application
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and navigate to:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
+### Production Build
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+To generate an optimized production build, run:
 
 ```bash
 ng build
 ```
+The generated build files are available inside the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Screenshots
 
-```bash
-ng test
-```
+### 1. Successful Angular Build
 
-## Running end-to-end tests
+![Successful Build](Screenshots/build_sucess.png)
 
-For end-to-end (e2e) testing, run:
+### 2. Product Catalogue and Angular Control Flow
 
-```bash
-ng e2e
-```
+![Control Flow](Screenshots/control_flow.png)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 3. About Page and Navigation
 
-## Additional Resources
+![About Page](Screenshots/about_navigation.png)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+## Conclusion
+
+This project demonstrates the fundamental concepts of Angular development through a simple product catalogue application, with a focus on standalone components, services, dependency injection, routing and modern template control flow.
+
+
